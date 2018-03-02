@@ -45,7 +45,7 @@ form {
 
 .input-deco {
     background: url('../images/d_input.jpg') no-repeat center / contain;
-    width: 97%;
+    width: 365px;
     height: 96px;
     display: flex;
     flex-flow: column nowrap;
@@ -55,7 +55,7 @@ form {
 
 form input[type='text'] {
     width: 345px;
-    height: 60px;
+    height: 59px;
     margin: 0 0 10px 0;
     background: #134395;
     border-radius: 5px;
@@ -101,6 +101,22 @@ button:hover {
     background: #bb324c;
 }
 
+.recaptcha {
+    width: 300px;
+    height: 75px;
+    background: #FFF;
+    margin: 20px 0;
+    border-radius: 4px;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+
+.recaptcha div, .recaptcha iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 4px;
+}
+
 .paging {
     position: absolute;
     margin: 0 13%;
@@ -126,7 +142,7 @@ button:hover {
     }
     .input-deco {
         width: 365px;
-        margin-top: 311px;
+        margin-top: 313px;
         margin-left: -9px;
     }
     form input[type='text'] {
