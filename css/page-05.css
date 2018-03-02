@@ -1,0 +1,109 @@
+/* CONTENT SETUP */
+
+main {
+    color: #FFF;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background: #174492 url('../images/m_bg-pages-480.jpg') no-repeat top;
+    width: 100%;
+    height: 996px;
+    margin: 0 auto;
+}
+
+.content {
+    position: relative;
+    margin: 150px 0 0 0;
+    padding: 0 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.con-title img {
+  width: 275px;
+  height: 24px;
+}
+
+.con-subtitle img {
+  width: 275px;
+  height: 26px;
+}
+
+
+.con-subtitle img {
+  margin: 30px 0 20px 0;
+}
+
+.con-button {
+  text-align: center;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background: #FFF;
+    color: #134395;
+    font-weight: bold;
+    padding: 8px 40px;
+    max-height: 50px;
+    transition: 200ms ease-in-out all;
+}
+
+button:hover, button:active {
+    background: #FFD011;
+    color: #134395;
+}
+
+button.btn-red:hover, button.btn-red:active {
+    color: #FFF;
+    background: #bb324c;
+}
+
+.txt-sm {
+    font-size: 0.8em;
+}
+
+.paging {
+    bottom: 20px;
+    top: auto;
+    left: auto;
+    margin: 0 12%;
+}
+
+.flex {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@media (min-width: 800px) {
+    main {
+        background: #174492 url('../images/d_bg-pages.jpg') no-repeat top;
+        height: 1016px;
+        text-align: center;
+    }
+    button {
+      padding: 8px 40px;
+      width: auto;
+    }
+    .content {
+        width: 65%;
+    }
+    .con-title img {
+      width: auto;
+      height: auto;
+    }
+
+    .con-subtitle img {
+      width: auto;
+      height: auto;
+    }
+    .paging {
+        margin: 0 29.2%;
+    }
+    .flex {
+        flex-flow: row nowrap;
+    }
+}

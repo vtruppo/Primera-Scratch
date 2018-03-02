@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Primera | Scratch</title>
+  <meta name="description" content="scratch">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  /* FRAME SETUP */
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    color: #333;
+    background: #CCE8F4;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    background: #FFF;
+  }
+  .full {
+    width: 100%;
+  }
+  .clear {
+    clear: both;
+  }
+  .box {
+    overflow: hidden;
+  }
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-top: 1em;
+  }
+  header div.header-img {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  header img {
+    width: 300px;
+    height: 60px;
+    flex-grow: 1;
+    margin: 10px 0;
+  }
+  header div.header-nav {
+  }
+  .header-nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+  }
+  .header-nav ul a {
+    text-decoration: none;
+  }
+  .header-nav li {
+    flex-grow: 1;
+    background: #134395;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 0;
+    border-bottom: 1px solid #bdd8f5;
+    transition: 200ms background ease-in;
+  }
+  .header-nav li:hover {
+    background: #FFD011;
+    color: #134395;
+  }
+  .btn-blue {
+    background: #134395;
+    color: #FFF;
+  }
+  .btn-yellow, li.btn-yellow {
+    background: #FFD011;
+    color: #134395;
+  }
+  li.btn-yellow:hover {
+    background: #134395;
+    color: #FFF;
+  }
+  .btn-red {
+    background: #E84262;
+    color: #FFF;
+  }
+  footer {
+    background: #FFF;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 20px;
+    color: #4266A7;
+  }
+  .footer-logos {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  img.ft-logos-primera {
+    width: 200px;
+    height: 35px;
+  }
+  .footer-partners {
+    margin: 0 0 0 40px;
+    font-size: 0.8em;
+  }
+  .footer-partners-logos {
+    margin: 10px 0 0 0;
+  }
+  .footer-social {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 0.9em;
+  }
+  .footer-social img {
+    margin: 0 0 0 15px;
+  }
+  .footer-logos, .footer-partners, .footer-social {
+    margin-top: 20px;
+  }
+
+  /* CONTENT SETUP */
+  main { 
+    padding: 20px;
+    background: #134395;
+    color: #FFF;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  main p {
+  }
+  .content {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+    margin: 50px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .form-col {
+    flex-grow: 1;
+    margin: 0.2em 0;
+  }
+  .col1 {
+    width: 100%;
+  }
+
+  .col2 {
+    width: 100%;
+  }
+  .form-button {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 0 0;
+  }
+  button {
+    min-width: 100px;
+    height: 3em;
+    border: none;
+    border-radius: 4px;
+    background: #FFF;
+    color: #134395;
+    font-weight: bold;
+    padding: 5px 15px;
+    transition: 200ms ease-in-out all;
+  }
+  button:hover {
+    background: #d2ad09;
+  }
+  form input[type='text'] {
+    width: 100%;
+    height: 3em;
+    border-radius: 4px;
+    border: none;
+    background: rgba(255,255,255,0.5);
+    color: #FFF;
+    padding: 0 0 0 5px;
+    box-sizing: border-box;
+    box-shadow: none;
+    transition: 300ms ease-in-out all;
+  }
+  form input[type='text']:hover {
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
+  }
+  form button[type='submit'] {
+    margin: 1em 0;
+  }
+  form input.error {
+    border: 2px solid #FFD520;
+  }
+  form label {
+    line-height: 2em;
+  }
+  form label.error {
+    display: block;
+    margin: 5px 0;
+    font-size: 0.8em;
+    color: #FFD520;
+    transition: 250ms all ease-in-out;
+  }
+
+  /* MQ SETUP */
+  @media (min-width: 576px) {
+    body {
+      font-size: 0.9em;
+    }
+    .container {
+      width: 70%;
+    }
+    .content {
+      width: 60%;
+    }
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      padding: 0 20px;
+    }
+    header img {
+      width: 300px;
+      height: 60px;
+    }
+    .header-nav {
+      margin: 0 20px;
+    }
+    .header-nav ul {
+      flex-flow: row nowrap;
+    }
+    .header-nav li {
+      margin: 0 10px 0px 0;
+      border-radius: 4px;
+      border: none;
+    }
+    main { 
+      padding: 50px 20px;
+    }
+    button {
+      height: 2em;
+    }
+    form {
+      flex-direction: row;
+    }
+    .form-col{
+      margin: .5em 0;
+    }
+    .col1 {
+      width: 35%;
+    }
+
+    .col2 {
+      width: 65%;
+    }
+    .form-button {
+      margin: 0;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    form input[type='text'] {
+      height: 2.5em;
+    }
+    footer {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 3em 20px;
+    }
+    .footer-logos {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    .footer-logos, .footer-partners, .footer-social {
+      width: auto;
+      margin-top: 0;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 70%;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 70%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 70%;
+    }
+  }
+  @media (min-width: 1500px) {
+    .container {
+      width: 70%;
+    }
+  }
+  </style>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- PAGE -->
+  <div class="container">
+    <!-- HEADER -->
+    <header class="box">
+      <div class="header-img box">
+        <a href=""><img src="images/primera_logo.gif" alt="" title="" style="" /></a>
+      </div>
+      <div class="header-nav box">
+        <ul>
+          <a href="">
+            <li class="btn-yellow">Home</li></a>
+          <a href="">
+            <li>
+            Prijzen</li></a>
+          <a href="">
+            <li>Partners</li></a>
+          <a href="">
+            <li>Actievoorwarden</li></a>
+        </ul>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class="">
+      <div class="content">
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <!-- FORM -->
+        <form class="clear" id="form-data">
+          <div class="form-col col1">
+            <label>Geslacht</label>
+          </div>
+          <div class="form-col col2">
+            <input type="radio" value="man" name="gender">
+            <label for="gender_man">Man</label>
+            <input type="radio" value="woman" name="gender"> 
+            <label for="gender_woman">Vrouw</label>
+            <label for="gender" class="error clear" style="display: none;"></label>
+          </div>
+          <div class="form-col col1">
+            <label>Voornaam</label>
+          </div>
+          <div class="form-col col2">
+            <input type="text" name="firstname">
+          </div>
+          <div class="form-col col1">
+            <label>Tussenvogels</label>
+          </div>
+          <div class="form-col col2">
+            <input type="text" name="initials">
+          </div>
+          <div class="form-col col1">
+            <label>Achternaam</label>
+          </div>
+          <div class="form-col col2">
+            <input type="text" name="lastname">
+          </div>
+          <div class="form-col col1">
+            <label>Postcode</label>
+          </div>
+          <div class="form-col col2">
+            <input type="text" name="postcode">
+          </div>
+          <div class="form-col col1">
+            <label>Huisnummer</label>
+          </div>
+          <div class="form-col col2">
+            <input type="text" name="house-number">
+          </div>
+          <div class="form-col col1">
+            <label>Toevoeging</label>
+          </div>
+          <div class="form-col col2">
+            <input type="text" name="house-number-add">
+          </div>
+          <div class="form-col col1">
+            <label>Geboortedatum</label>
+          </div>
+          <div class="form-col col2">
+            <input type="text" name="date-of-birth">
+          </div>
+          <div class="form-col col1">
+            <label>E-mailadres</label>
+          </div>
+          <div class="form-col col2">
+            <input type="text" name="email">
+          </div>
+          <div class="form-col form-button">
+            <div class="form-optin">
+              <input type="checkbox" name="optin"> Ik wil nieuws en aanbiedingen per mail ontvangen van Primera. 
+            </div>
+            <button type="submit" id="form-submit" class="btn-red">Submit</button>
+          </div>
+        </form>
+        <!-- /FORM -->
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="box">
+      <div class="footer-logos">
+        <a href="">
+          <img src="images/primera_logo.gif" alt="" title="" style="" class="ft-logos-primera" /></a>
+        <div class="footer-partners">
+          De primera loterij wordt mede mogelijk gemaakt door:
+          <div class="footer-partners-logos">
+            <a href="">
+              <img src="http://placehold.it/150x30" alt="" title="" style="" /></a>
+            <a href="">
+              <img src="http://placehold.it/150x30" alt="" title="" style="" /></a>
+            <a href="">
+              <img src="http://placehold.it/150x30" alt="" title="" style="" /></a>
+            <a href="">
+              <img src="http://placehold.it/150x30" alt="" title="" style="" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-social">
+        volg ons op: 
+        <a href="">
+          <img src="http://placehold.it/40x40" alt="" title="" style="" /></a>
+        <a href="">
+          <img src="http://placehold.it/40x40" alt="" title="" style="" /></a>
+      </div>
+    </footer>
+  </div>
+  <!-- /PAGE -->
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/jsvalidation.js"></script>
+  <script type="text/javascript">
+    (function(){
+      //VALIDATOR
+      $("#form-submit").click(function(){
+        console.log('submit')
+        $("#form-data").validate({
+          debug: true,
+          rules: {
+            gender: {
+              required: true
+            },
+            firstname: "required",
+            postcode: {
+              required: true,
+              number: true
+            },
+            email: {
+              required: true,
+              email: true
+            }
+          }
+        });
+      })
+    })();
+
+    //DUTCH LOCALIZATION
+    $.extend( $.validator.messages, {
+      required: "Dit is een verplicht veld.",
+      remote: "Controleer dit veld.",
+      email: "Vul hier een geldig e-mailadres in.",
+      url: "Vul hier een geldige URL in.",
+      date: "Vul hier een geldige datum in.",
+      dateISO: "Vul hier een geldige datum in (ISO-formaat).",
+      number: "Vul hier een geldig getal in.",
+      digits: "Vul hier alleen getallen in.",
+      creditcard: "Vul hier een geldig creditcardnummer in.",
+      equalTo: "Vul hier dezelfde waarde in.",
+      extension: "Vul hier een waarde in met een geldige extensie.",
+      maxlength: $.validator.format( "Vul hier maximaal {0} tekens in." ),
+      minlength: $.validator.format( "Vul hier minimaal {0} tekens in." ),
+      rangelength: $.validator.format( "Vul hier een waarde in van minimaal {0} en maximaal {1} tekens." ),
+      range: $.validator.format( "Vul hier een waarde in van minimaal {0} en maximaal {1}." ),
+      max: $.validator.format( "Vul hier een waarde in kleiner dan of gelijk aan {0}." ),
+      min: $.validator.format( "Vul hier een waarde in groter dan of gelijk aan {0}." ),
+      step: $.validator.format( "Vul hier een veelvoud van {0} in." )
+    });
+  </script>
+</body>
+</html>

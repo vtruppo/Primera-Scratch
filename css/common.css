@@ -1,0 +1,373 @@
+/* COMMON STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    color: #333;
+    background: #151515;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background: #212121;
+}
+
+.inner {
+    margin: 0 auto;
+}
+
+.full {
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+.box {
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-top: 1em;
+    background: #FFF;
+}
+
+header div.header-img {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+header img {
+    width: 200px;
+    height: auto;
+    flex-grow: 1;
+    margin: 10px 0;
+}
+
+header div.header-nav {}
+
+#header-menu {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#header-menu:active {
+    /*box-shadow: -5px -5px 5px 10px rgba(0, 0, 0, 0.5);*/
+}
+
+#header-menu img {
+    width: 50px;
+    height: auto;
+    margin: 0;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    transition: 300ms all ease-in-out;
+}
+
+.menu-close {
+    display: none;
+    height: 0;
+}
+
+.header-nav ul.menu-links-open {
+    height: 120px;
+}
+
+.header-nav ul a {
+    text-decoration: none;
+}
+
+.header-nav li {
+    flex-grow: 1;
+    background: #134395;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 0;
+    border-bottom: 1px solid #bdd8f5;
+    transition: 200ms background ease-in;
+}
+
+.header-nav li:hover {
+    background: #FFD011;
+    color: #134395;
+}
+
+.btn-blue {
+    background: #134395;
+    color: #FFF;
+}
+
+.btn-yellow,
+li.btn-yellow {
+    background: #FFD011;
+    color: #134395;
+}
+
+li.btn-yellow:hover {
+    background: #134395;
+    color: #FFF;
+}
+
+.btn-red {
+    background: #E84262;
+    color: #FFF;
+}
+
+footer {
+    background: #FFF;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 20px;
+    color: #4266A7;
+}
+
+.footer-links {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-links a {
+    display: inline-block;
+    color: #134395;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-icons {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+img.ft-logos-primera {
+    width: 200px;
+    height: 35px;
+}
+
+.footer-partners {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.footer-partners-logos {
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.footer-partners-logos a {
+    height: 34px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-partners-logos img {}
+
+.footer-social {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.footer-social img {
+    margin: 0 0 0 15px;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+
+/* PAGER */
+
+.paging {
+    position: absolute;
+    width: 50%;
+    top: 1020px;
+    z-index: 0;
+    margin: 0 25%;
+}
+
+.pg-line {
+    background: #FFF;
+    width: 100%;
+    height: 2px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+}
+
+.pg-marker-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.pg-marker {
+    background: #FFF;
+    color: #134395;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    transition: 500ms all ease-in-out;
+}
+
+.pg-progress {
+    width: 0%;
+    height: 100%;
+    background: #E9B017;
+    transition: 500ms all ease-in-out;
+}
+
+.pg-yellow {
+    background: #E9B017;
+}
+
+.counter {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    font-family: Impact;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 0.04em;
+}
+.clock {
+    width: auto;
+    margin: 0.5em 1em 1.7em 1em;
+    position: relative;
+    display: inline-block;
+}
+
+.clock .flip-clock-dot {
+    display: none;
+}
+
+.clock .flip-clock-divider .flip-clock-label {
+}
+
+.clock .flip-clock-divider {
+    width: 10px;
+}
+
+@media (min-width: 800px) {
+    body {
+        font-size: 0.9em;
+    }
+    .container {
+        width: 1417px;
+        background: #FFF;
+    }
+    .inner {
+        width: 65%;
+    }
+    .content {
+        width: 80%;
+        text-align: center;
+    }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        padding: 0 20px;
+    }
+    header img {
+        width: 170px;
+        height: auto;
+    }
+    #header-menu {
+        display: none;
+    }
+    .header-nav ul {
+        display: flex;
+        height: auto;
+    }
+    .header-nav ul.menu-links-open {
+        height: auto;
+    }
+    .header-nav {
+        margin: 0 20px;
+    }
+    .header-nav ul {
+        flex-flow: row nowrap;
+    }
+    .header-nav li {
+        margin: 0 10px 0px 0;
+        border-radius: 4px;
+        border: none;
+    }
+    footer {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px 40px 20px;
+    }
+    .footer-links {
+        flex-flow: row nowrap;
+    }
+    .footer-icons {
+        flex-flow: row nowrap;
+        margin: 30px 0 0 0;
+    }
+    .footer-partners-logos {
+        justify-content: flex-start;
+    }
+    .footer-partners-logos img {
+        margin: 0 20px 0 0;
+    }
+    .paging {
+        top: 1065px;
+        left: 805px;
+        width: 280px;
+        margin: 0;
+    }
+    .counter {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0px auto 0 auto;
+    }
+    .counter-cta {
+        margin: 0 0 12px 0;
+    }
+}
+
+@media (min-width: 1280px) {}

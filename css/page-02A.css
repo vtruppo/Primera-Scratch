@@ -1,0 +1,257 @@
+/* CONTENT SETUP */
+
+main {
+    color: #FFF;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background: #174492 url('../images/m_bg-pages-480.jpg') no-repeat top;
+    width: 100%;
+    height: 1500px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 0 50px;
+    position: relative;
+}
+
+form {
+    width: 100%;
+    margin: 350px 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-col {
+    flex-grow: 1;
+    margin: .2em 0;
+    text-align: left;
+}
+.col1 {
+    width: 100%;
+}
+
+.col2 {
+    width: 100%;
+    margin-bottom: 12px;
+}
+.form-button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin: 0 0 0 0;
+}
+
+.form-confirm {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    margin: 1.5em 0 0 0;
+}
+
+.form-opt-ins {
+    display: flex;
+    flex-flow: column nowrap;  
+    justify-content: space-between;
+}
+
+.form-opt-ins .form-click {
+    margin: 10px 0 0 0;
+}
+
+.form-click-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  min-height: 30px;
+}
+
+.form-click {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 5px 0;
+  min-height: 15px;
+}
+.form-click label {
+    display: inline-block;
+    padding-left: 22px;
+    margin-right: 20px;
+    line-height: 15px;
+}
+.form-click input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+.form-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 3px;
+  background-color: #eee;
+  z-index: 1;
+  transition: 200ms cubic-bezier(1,.15,.27,.89) all;
+}
+.form-click:hover input ~ .form-check {
+  background-color: #ccc;
+}
+.form-check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form-click input:checked ~ .form-check {
+  display: block;
+  background: #FED114;
+}
+
+.form-confirm .form-click:first-child {
+    margin-top: 0;
+}
+
+form input[type='text'] {
+    width: 100%;
+    height: 30px;
+    background: #FFF;
+    border-radius: 5px;
+    border: none;
+    color: #111;
+    padding: 0 0 0 5px;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-size: 1em;
+    text-align: center;
+    transition: 300ms ease-in-out all;
+}
+
+form input[type='text']:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+form .input-type {
+    width: 100%;
+    height: 30px;
+    text-align: left;
+}
+
+form button[type='submit'] {
+    margin: 1.5em 0 0 0;
+}
+
+form input.error {
+    border: 2px solid #FFD011;
+}
+
+form label.error {
+    display: inline-block;
+    margin-left: 10px;
+    color: #FFD819;
+    font-size: 0.75em;
+}
+
+button {
+    min-width: 100px;
+    border: none;
+    border-radius: 4px;
+    background: #FFF;
+    color: #134395;
+    font-weight: bold;
+    padding: 6px 25px;
+    max-height: 35px;
+    transition: 200ms ease-in-out all;
+}
+
+button:hover, button:active {
+    background: #FFD011;
+    color: #134395;
+}
+
+button.btn-red:hover, button.btn-red:active {
+    color: #FFF;
+    background: #bb324c;
+}
+
+.txt-sm {
+    font-size: 0.8em;
+}
+
+.paging {
+    bottom: 20px;
+    top: auto;
+    left: auto;
+    margin: 0 13%;
+}
+
+.flex {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@media (min-width: 800px) {
+    main {
+        background: #174492 url('../images/d_bg-pages.jpg') no-repeat top;
+        height: 1016px;
+        text-align: center;
+    }
+    button {}
+    .content {
+        width: 65%;
+    }
+    form {
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      margin: 380px 0 0 0;
+    }
+    .form-col {
+      margin: .3em 0;
+    }
+    .col1 {
+      width: 28%;
+    }
+    .col2 {
+      width: 72%;
+    }
+    .form-confirm {
+        flex-flow: row nowrap;
+        width: 75%;
+    }
+    .form-button {
+        margin: 0;
+    }
+    .form-button .input-type {
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+    form input[type='text'], form .input-type {
+        width: 65%;
+    }
+    form button[type='submit'] {
+        margin: 0 0 0 0;
+    }
+    .paging {
+        margin: 0 28%;
+    }
+    .flex {
+        flex-flow: row nowrap;
+    }
+}

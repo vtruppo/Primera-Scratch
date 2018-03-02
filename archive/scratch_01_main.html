@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>500 Winkels Loterij | Primera</title>
+  <meta name="description" content="Primera">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MVHJ3NG');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/page-01.css">
+  <style>
+  /* FRAME SETUP */
+  * {
+    box-sizing: border-box;
+  }
+  @font-face {
+      font-family: 'EMprint';  
+      src: url('https://newsltags.m-point.eu/EMprint-Regular.ttf');      
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'EMprint', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    color: #333;
+    background: #151515;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    background: #212121;
+  }
+  .inner {
+    margin: 0 auto;
+  }
+  .full {
+    width: 100%;
+  }
+  .clear {
+    clear: both;
+  }
+  .box {
+    overflow: hidden;
+  }
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-top: 1em;
+    background: #FFF;
+  }
+  header div.header-img {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  header img {
+    width: 200px;
+    height: auto;
+    flex-grow: 1;
+    margin: 10px 0;
+  }
+  header div.header-nav {
+  }
+  #header-menu {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+  }
+  #header-menu:active {
+    /*box-shadow: -5px -5px 5px 10px rgba(0, 0, 0, 0.5);*/
+  }
+  #header-menu img {
+    width: 50px;
+    height: auto;
+    margin: 0;
+  }
+  .header-nav ul {
+    display: flex;
+    list-style: none;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    transition: 300ms all ease-in-out;
+  }
+  .menu-close {
+    display: none;
+    height: 0;
+  }
+  .header-nav ul.menu-links-open {
+    height: 120px;
+  }
+  .header-nav ul a {
+    text-decoration: none;
+  }
+  .header-nav li {
+    flex-grow: 1;
+    background: #134395;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 0;
+    border-bottom: 1px solid #bdd8f5;
+    transition: 200ms background ease-in;
+  }
+  .header-nav li:hover {
+    background: #FFD011;
+    color: #134395;
+  }
+  .btn-blue {
+    background: #134395;
+    color: #FFF;
+  }
+  .btn-yellow, li.btn-yellow {
+    background: #FFD011;
+    color: #134395;
+  }
+  li.btn-yellow:hover {
+    background: #134395;
+    color: #FFF;
+  }
+  .btn-red {
+    background: #E84262;
+    color: #FFF;
+  }
+  footer {
+    background: #FFF;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 20px;
+    color: #4266A7;
+  }
+  .footer-links {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer-links a {
+    display: inline-block;
+    color: #134395;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .footer-icons {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  img.ft-logos-primera {
+    width: 200px;
+    height: 35px;
+  }
+  .footer-partners {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .footer-partners-logos {
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .footer-partners-logos a {
+    height: 34px;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-partners-logos img {
+
+  }
+  .footer-social {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  .footer-social img {
+    margin: 0 0 0 15px;
+  }
+  .footer-social {
+    margin-top: 20px;
+  }
+
+  /* PAGER */
+  .paging {
+    position: absolute;
+    width: 280px;
+    top: 1305px;
+    left: 115px;
+    z-index: 0;
+  }
+  .pg-line {
+    background: #FFF;
+    width: 100%;
+    height: 2px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+  }
+  .pg-marker-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+  }
+  .pg-marker {
+    background: #FFF;
+    color: #134395;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    transition: 500ms all ease-in-out;
+  }
+  .pg-progress {
+    width: 0%;
+    height: 100%;
+    background: #E9B017;
+    transition: 500ms all ease-in-out;
+  }
+  .pg-yellow {
+    background: #E9B017;
+  }
+
+  /* CONTENT SETUP */
+  main { 
+    color: #FFF;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background: url('images/m_bg.jpg') no-repeat top;
+    width: 100%;
+    height: 1330px;
+    margin: 0 auto;
+  }
+  main p {
+  }
+  .content {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+    margin: 50px 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-row {
+    flex-grow: 1;
+    width: 100%;
+    margin: 0.2em 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .form-button {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 0 0;
+  }
+  .input-deco {
+    background: url('images/d_input.jpg') no-repeat center / contain;
+    width: 100%;
+    height: 96px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    margin-top: 511px;
+  }
+  form input[type='text'] {
+    width: 345px;
+    height: 60px;
+    margin: 0 0 11px 0;
+    background: #134395;
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    padding: 0 0 0 5px;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 300ms ease-in-out background;
+  }
+  form input[type='text']:hover {
+    background: #103c88;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
+  }
+  form button[type='submit'] {
+    margin: 5px 0 0 0;
+  }
+  form input.error {
+    background: #E84262;
+  }
+  form label.error {
+    color: #FFD819;
+  }
+  button {
+    min-width: 100px;
+    border: none;
+    border-radius: 4px;
+    background: #FFF;
+    color: #134395;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: 200ms ease-in-out all;
+  }
+  button:hover {
+    background: #bb324c;
+  }
+
+  /* MQ SETUP */
+  @media (min-width: 800px) {
+    body {
+      font-size: 0.9em;
+    }
+    .container {
+      width: 1417px;
+      background: #FFF;
+    }
+    .inner {
+      width: 65%;
+    }
+    .content {
+      width: 80%;
+      text-align: center;
+    }
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      padding: 0 20px;
+    }
+    header img {
+      width: 170px;
+      height: auto;
+    }
+    #header-menu {
+      display: none;
+    }
+    .header-nav ul {
+      display: flex;
+      height: auto;
+    }
+    .header-nav ul.menu-links-open {
+      height: auto;
+    }
+    .header-nav {
+      margin: 0 20px;
+    }
+    .header-nav ul {
+      flex-flow: row nowrap;
+    }
+    .header-nav li {
+      margin: 0 10px 0px 0;
+      border-radius: 4px;
+      border: none;
+    }
+    main { 
+      background: url('images/d_bg.jpg') no-repeat top;
+      height: 1016px;
+      text-align: center;
+    }
+    button {
+    }
+    form {
+    }
+    .form-row{
+      margin: .5em 0;
+    }
+    .form-button {
+      margin: 0;
+    }
+    .input-deco {
+      width: 365px;
+      margin-top: 373px;
+      margin-left: -10px;
+    }
+    form input[type='text'] {
+      width: 348px;
+    }
+
+    footer {
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px 40px 20px;
+    }
+    .footer-links {
+      flex-flow: row nowrap;
+    }
+    .footer-icons {
+      flex-flow: row nowrap;
+      margin: 30px 0 0 0;
+    }
+    .footer-partners-logos {
+      justify-content: flex-start;
+    }
+    .footer-partners-logos img {
+      margin: 0 20px 0 0;
+    }
+    .paging {
+      top: 1065px;
+      left: 805px;
+    }
+  }
+  @media (min-width: 1280px) {
+  }
+  </style>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVHJ3NG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- PAGE -->
+  <div class="container">
+    <!-- HEADER -->
+    <header class="box clear inner">
+      <div class="header-img box">
+        <a href="https://www.primera.nl/"><img src="images/primera_logo-sm.png" alt="Primera" title="Primera" style="" /></a>
+      </div>
+      <div class="header-nav box">
+        <ul>
+          <a href="Primera">
+            <li class="btn-yellow">Home</li></a>
+          <a href="">
+            <li>
+            Prijzen</li></a>
+          <a href="">
+            <li>Partners</li></a>
+          <a href="">
+            <li>Contact</li></a>
+        </ul>
+      </div>
+        <div id="header-menu">
+          <img src="images/menu-burger.png" alt="" title="" style="" />
+        </div>
+    </header>
+    <!-- /HEADER -->
+    <!-- MAIN -->
+    <main class="box clear">
+      <div class="content">
+        <div class="counter"></div>
+        <!-- FORM -->
+        <form class="clear" id="form-data">
+          <div class="form-row input-deco">
+            <input type="text" name="code">
+          </div>
+          <label for="code" class="error"></label>
+          <div class="form-row form-button">
+            <button type="submit" id="form-submit" class="btn-red">CHECK!</button>
+          </div>
+        </form>
+        <!-- /FORM -->
+        <!-- PROGRESS -->
+        <div class="paging">
+          <div class="pg-line">
+            <div class="pg-progress"></div>
+          </div>
+          <div class="pg-marker-container">
+            <div class="pg-marker" id="pg-m-1">1</div>
+            <div class="pg-marker" id="pg-m-2">2</div>
+            <div class="pg-marker" id="pg-m-3">3</div>
+            <div class="pg-marker" id="pg-m-4">4</div>
+            <div class="pg-marker" id="pg-m-5">5</div>
+          </div>
+        </div>
+        <!-- /PROGRESS -->
+      </div>
+    </main>
+    <!-- /MAIN -->
+    <!-- FOOTER -->
+    <footer class="box clear inner">
+        <div class="footer-links">
+          <a href="">Meest gestelde vragen</a>
+          <a href="">Voorwaarden actie</a>
+          <a href="">Cookies</a>
+          <a href="">Disclaimer</a>
+        </div>
+        <div class="footer-icons">
+          <div class="footer-partners">
+            De primera loterij wordt mede mogelijk gemaakt door:
+            <div class="footer-partners-logos">
+              <a href="https://www.inventum.eu/?gclid=CjwKCAiA_c7UBRAjEiwApCZi8U9U21VYhT4FGCH_dagMgnBPQnlhOGkRoM0UIVwRvWc1MIwnY6fqCxoCKXwQAvD_BwE" target="_blank">
+                <img src="images/lg-inventum.png" alt="Inventum" title="Inventum" style="" /></a>
+              <a href="https://www.corendon.nl/" target="_blank">
+                <img src="images/lg-corendon.png" alt="Corendon" title="Corendon" style="" /></a>
+              <a href="http://www.peugeot-scooters.nl/" target="_blank">
+                <img src="images/lg-peugeot.png" alt="Peugeot" title="Peugeot" style="" /></a>
+              <a href="https://www.denksport.nl/" target="_blank">
+                <img src="images/lg-denksport.png" alt="Denksport" title="Denksport" style="" /></a>
+              <a href="https://www.nederlandseloterij.nl/" target="_blank">
+                <img src="images/lg-loterij.png" alt="Bank Giro Loterij" title="Bank Giro Loterij" style="" /></a>
+              <a href="https://dagjewellness.nl/" target="_blank">
+                <img src="images/lg-dagje.png" alt="Dagje Wellness" title="Dagje Wellness" style="" /></a>
+            </div>
+          </div>
+          <div class="footer-social">
+            volg ons op: 
+            <a href="https://www.facebook.com/Primera.nl/">
+              <img src="images/lg-facebook.png" alt="Facebook" title="Facebook" style="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /FOOTER -->
+  </div>
+  <!-- /PAGE -->
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/jsvalidation.js"></script>
+  <script type="text/javascript">
+    (function(){
+      //PROGRESS
+      var page = 1;
+      for (var i = 1; i <= page; i++) {
+        $(".pg-marker:nth-child(" + i + ")").addClass("pg-yellow");
+      }
+      $(".pg-progress").width( ((page - 1) * 25) + "%" );
+
+      //MOBILE MENU
+      $("#header-menu").click(function(){
+        $(".header-nav ul").toggleClass("menu-links-open");
+      })
+
+      //VALIDATOR
+      $("#form-submit").click(function(){
+        console.log('submit')
+        $("#form-data").validate({
+          debug: true,
+          rules: {
+            code: {
+              required: true
+            }
+          }
+        });
+      })
+
+    })();
+
+    //DUTCH LOCALIZATION
+    $.extend( $.validator.messages, {
+      required: "Dit is een verplicht veld.",
+      remote: "Controleer dit veld.",
+      email: "Vul hier een geldig e-mailadres in.",
+      url: "Vul hier een geldige URL in.",
+      date: "Vul hier een geldige datum in.",
+      dateISO: "Vul hier een geldige datum in (ISO-formaat).",
+      number: "Vul hier een geldig getal in.",
+      digits: "Vul hier alleen getallen in.",
+      creditcard: "Vul hier een geldig creditcardnummer in.",
+      equalTo: "Vul hier dezelfde waarde in.",
+      extension: "Vul hier een waarde in met een geldige extensie.",
+      maxlength: $.validator.format( "Vul hier maximaal {0} tekens in." ),
+      minlength: $.validator.format( "Vul hier minimaal {0} tekens in." ),
+      rangelength: $.validator.format( "Vul hier een waarde in van minimaal {0} en maximaal {1} tekens." ),
+      range: $.validator.format( "Vul hier een waarde in van minimaal {0} en maximaal {1}." ),
+      max: $.validator.format( "Vul hier een waarde in kleiner dan of gelijk aan {0}." ),
+      min: $.validator.format( "Vul hier een waarde in groter dan of gelijk aan {0}." ),
+      step: $.validator.format( "Vul hier een veelvoud van {0} in." )
+    });
+  </script>
+</body>
+</html>
